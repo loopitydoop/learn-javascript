@@ -1,4 +1,8 @@
-let username = 'per"
+let username = "per"
+let message = "You have three new notifications";
 
-console.log(username)
+let concatenatedMessage = message + ", " + username + "!";
+console.log(concatenatedMessage);
+
+
 
