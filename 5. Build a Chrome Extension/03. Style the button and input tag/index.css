@@ -14,9 +14,22 @@ green color -> #5f9341
 
 
 input {
-    
+    /* true width is 100% + 10px + 10px, bc it includes left and right padding */
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 4px;
+    /* this makes the box sized along its borders (???) the alternative is content-box, where the width and height only apply to the content, and the borders and padding expand the size of the element.*/
+    /* border-box seems to be preferred for web-design */
+    box-sizing: border-box;
+    border: 1px solid #5f9341;
 }
 
 button {
-    
+    background: #5f9341;
+    color: white;
+    box-sizing: border-box;
+    /* y-axis, x-axis */
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
 }

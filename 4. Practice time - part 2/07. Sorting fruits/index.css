@@ -2,6 +2,14 @@ body {
     padding: 40px;
     background: whitesmoke;
     text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#unsorted-shelf {
+    background: lightgray;
+    border-radius: 10px;
+    height: 30px;
+    margin: 10px 0;
 }
 
 #apple-shelf {
@@ -15,4 +23,10 @@ body {
     background: lightsalmon;
     border-radius: 10px;
     height: 30px;
+}
+
+button {
+    color: whitesmoke;
+    background: darkgreen;
+    margin-block: 8px;
 }
