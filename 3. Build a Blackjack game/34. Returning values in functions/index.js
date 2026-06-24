@@ -12,12 +12,21 @@ function getFastestRaceTime() {
     }
 }
 
-// let fastestRace = getFastestRaceTime()
-// console.log(fastestRace)
+let fastestRace = getFastestRaceTime()
+console.log(fastestRace)
 
 // Write a function that returns the total race time
 // Call/invoke the function and store the returned value in a new variable
 // Finally, log the variable out
+
+function getTotalRaceTime() {
+    return player1Time + player2Time;
+}
+
+let totalRaceTime = getTotalRaceTime();
+console.log(totalRaceTime);
+
+// protip: click on word then command + d to select ALL instances of that word! You can then type and replace them all at once. Nifty for if you change variable names.
 
 
 

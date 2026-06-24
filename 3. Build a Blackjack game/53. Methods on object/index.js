@@ -1,7 +1,12 @@
+// you can create functions in objects - these are called "methods"
 let player = {
     name: "Per",
     chips: 200,
+    sayHello: function() {
+        console.log("Hello, my name is " + player.name);
+    }
 }
+player.sayHello();
 
 let cards = []
 let sum = 0

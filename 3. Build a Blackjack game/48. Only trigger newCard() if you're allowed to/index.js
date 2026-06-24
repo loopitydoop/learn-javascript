@@ -19,6 +19,8 @@ function getRandomCard() {
 }
 
 function startGame() {
+    // gotta initialise hasBlackJack to false and evaluate on the first renderGame() after the first hand is dealt, otherwise game cannot restart
+    hasBlackJack = false;
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -49,8 +51,10 @@ function renderGame() {
 
 function newCard() {
     // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
-    let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    renderGame()
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
 }

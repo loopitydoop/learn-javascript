@@ -12,5 +12,14 @@ let messages = [
 
 let newMessage = "Same here!"
 
+messages.push(newMessage);
+console.log(messages);
+
+messages.splice(3, 1);
+console.log("deleted last message");
+console.log(messages);
+
+// opposite of push, deletes the last entry of an array.
+messages.pop();
 
 

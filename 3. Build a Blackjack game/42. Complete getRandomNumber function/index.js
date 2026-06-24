@@ -13,7 +13,21 @@ let cardsEl = document.getElementById("cards-el")
 function getRandomCard() {
     // if 1     -> return 11
     // if 11-13 -> return 10
-    return Math.floor( Math.random()*13 ) + 1
+    console.log("generating new card");
+    let randomCard = Math.floor( Math.random()*13 ) + 1;
+    if (randomCard === 1) {
+        console.log("Randomly generated " + randomCard);
+        console.log("Returning 11");
+        return 11;
+    } else if (randomCard >= 11) {
+        console.log("Randomly generated " + randomCard);
+        console.log("Returning 10");
+        return 10;
+    } else {
+        console.log("Randomly generated " + randomCard);
+        console.log("Returning " + randomCard);
+        return randomCard;
+    }
 }
 
 function startGame() {

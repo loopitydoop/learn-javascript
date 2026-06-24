@@ -27,6 +27,7 @@ function getRandomCard() {
 }
 
 function startGame() {
+    hasBlackJack = false; // adding in this line so that you can reset the hasBlackJack state and keeping drawing cards even after getting blackjack once
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
