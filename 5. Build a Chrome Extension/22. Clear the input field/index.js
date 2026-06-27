@@ -6,6 +6,7 @@ const ulEl = document.getElementById("ul-el")
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     // Clear out the input field
+    inputEl.value = "";
     renderLeads()
 })
 
@@ -16,3 +17,5 @@ function renderLeads() {
     }
     ulEl.innerHTML = listItems  
 }
+
+// Element.value is used to mess with user-inputted fields, as opposed to Element.textContent

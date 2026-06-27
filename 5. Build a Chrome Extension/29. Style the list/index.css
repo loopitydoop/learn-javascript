@@ -22,14 +22,19 @@ button {
 
 
 /* STYLE THE LIST ACCORDING TO THE DESIGN */
+/* these are very broad selectors... it's impt to have tools for specificity */
 ul {
-    
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    margin-left: 0;
 }
 
 li {
-    
+    margin-top: 5px;
 }
 
-a {
-
+/* only anchor tags IN list items */
+li a {
+    color: #5f9341;
 }
