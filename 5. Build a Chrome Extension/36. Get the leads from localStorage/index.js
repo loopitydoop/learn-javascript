@@ -4,8 +4,16 @@ const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
 // Get the leads from the localStorage
+let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") );
 // Store it in a variable, leadsFromLocalStorage
+
+// PROBLEM ARISES: you need to evaluate whether leadsFromLocalStorage is null 
+// (when there is no key called "myLeads" in LocalStorage), or if it is an array
+// because if it is null, you don't wanna renderLeads - the for loop will prob return a 
+// TypeError when you try to iterate through it and this completely halts Javascript script execution
+
 // Log out the variable
+console.log(myLeads);
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)

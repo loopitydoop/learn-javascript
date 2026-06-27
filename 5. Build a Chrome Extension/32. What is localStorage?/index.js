@@ -1,3 +1,10 @@
+// open dev tools > go to applications > go to local Storage
+// can see keys, values on your device stored by the website.
+// if you run localStorage.clear() on the dev tools console, you can see all the key value pairs in localStorage() have been cleared.
+// this means javascript can interact with the key value pairs in local storage!
+// localStorage.setItem("myLeads", "https://www.google.com/")
+// now this key:value pair exists in local storage, and it persists even if you refresh the website!
+
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")

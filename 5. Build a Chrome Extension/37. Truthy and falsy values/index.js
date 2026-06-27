@@ -7,6 +7,10 @@
 // }
 
 // truthy
+// all objects (even empty arrays)
+// all numbers which aren't 0 or -0
+// strings
+
 // falsy
 
 // false
@@ -14,9 +18,11 @@
 // ""
 // null -> how you as a developer signalize emptiness
 // undefined -> how JavaScript signalizes emptiness
-// NaN
+// NaN -> rarely ever used
 
-let currentViewers = null
+let currentViewers = null // why not set this to an empty array? 
+// It's bc if you do if (currentViewers) {}, as a condition to evaluate whether there
+// are current viewers, it will wrongly return a truthy value when you put an empty array.
 
 currentViewers = ["jane", "nick"]
 

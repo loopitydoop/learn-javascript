@@ -4,8 +4,15 @@ const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
 // 1. Save a key-value pair in localStorage
+localStorage.setItem("myLeads", "www.google.com"); // localStorage object is accessible in the global scope
+// it persists even if I navigate away to another page and DO NOT setItem on the next time.
+// localStorage can only store strings... but eh, you can express Javascript Objects as strings using JSON notation right?
+
 // 2. Refresh the page. Get the value and log it to the console
+console.log( localStorage.getItem("myLeads") );
+
 // 3. Clear localStorage
+// localStorage.clear();
 
 // HINTS:
 // localStorage.setItem(key, value)
