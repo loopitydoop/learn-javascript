@@ -17,7 +17,12 @@ const tabs = [
 
 tabBtn.addEventListener("click", function(){
     // Save the url instead of logging it out
+    // save url to myLeads array
+    myLeads.push(tabs[0].url);
     console.log(tabs[0].url)
+    // save myLeads to localStorage
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) );
+    render(myLeads);
 })
 
 function render(leads) {

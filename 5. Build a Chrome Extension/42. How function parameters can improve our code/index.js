@@ -11,6 +11,10 @@ if (leadsFromLocalStorage) {
     renderLeads(myLeads)
 }
 
+// rn this has a low degree of re-useability, because it's hardcoded to:
+// - iterate through myLeads, the global variable (which is an array), specifically
+// - populate ulEl specifically
+// it would be useful if this code could read ANY array you give it and write it to any <ul> element you specify
 function renderLeads(leads) {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {

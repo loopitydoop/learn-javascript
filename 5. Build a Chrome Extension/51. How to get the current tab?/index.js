@@ -10,17 +10,18 @@ if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+// I think we should talk to Chrome API on line 20 of the code, whenever we click the tab btn
 
-const tabs = [
-    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-]
-
-
+// might have to use promises
 tabBtn.addEventListener("click", function(){
-    // Grab the URL of the current tab!
-    myLeads.push(tabs[0].url)
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
+    // this chrome.tabs only works in the context of the program running as a chrome extension
+    // query for active tabs in the current (last focused) window
+    chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs) {
+        let activeTab = tabs[0];
+        myLeads.push(activeTab.url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+        render(myLeads);
+    });
     
 })
 
