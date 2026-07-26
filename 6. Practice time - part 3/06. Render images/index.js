@@ -12,7 +12,7 @@ container = document.querySelector("#container");
 let imgsDOM = "";
 for (i = 0; i < imgs.length; i++)
 {
-	imgsDOM += `<img class="team-img" src="${imgs[i]}"></img>`;
+	imgsDOM += `<img alt="employee in the company" class="team-img" src="${imgs[i]}"></img>`;
 }
 container.innerHTML = imgsDOM;
 
