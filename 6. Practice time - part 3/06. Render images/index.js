@@ -7,3 +7,13 @@ const imgs = [
     "images/hip2.jpg",
     "images/hip3.jpg"
 ]
+
+container = document.querySelector("#container");
+let imgsDOM = "";
+for (i = 0; i < imgs.length; i++)
+{
+	imgsDOM += `<img class="team-img" src="${imgs[i]}"></img>`;
+}
+container.innerHTML = imgsDOM;
+
+// manipulating the DOM has a performance cost, so you want to call .innerHTML as little times as possible.
